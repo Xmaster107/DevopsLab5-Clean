@@ -13,7 +13,8 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
     - uses: actions/checkout@v4
-
+    - name: PythonV5
+      uses: actions/setup-python@v5
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v3
 
